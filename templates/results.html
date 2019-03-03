@@ -1,7 +1,6 @@
-
 <html lang="en">
-<head>
 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,6 +15,7 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <link rel="shortcut icon" href="{{ url_for('static', filename='ToS.png') }}">
 </head>
+
 <body>
 
   <style>
@@ -27,63 +27,79 @@
   </style>
 
   <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #E00000">
+
     <a class="navbar-brand" href="/"><strong>To<em>Scan</em></strong></a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-
-          <a class="nav-link" href="/ScanTos">Scanner</a>
-        </li>
-
-
+        <li class="nav-item active"><a class="nav-link" href="/ScanTos">Scanner</a></li>
       </ul>
+
   </nav>
 
   <br><br>
 
   <div class="container text-center">
+
     <div class="shadow p-3 mb-5 bg-white rounded">
 
       <P style="font-size:18px;">Results for {{safetyurl}}</P>
 
       <h1>Security score of <p style="display:inline-block;">{{score}}/100</p></h1>
 
-<label for="">Higher score is better</label>
+      <label for="">Higher score is better</label>
+
       <div class="progress text-center"  style="height: 25px; ">
-  <div class="progress-bar" id="bar" role="progressbar" style="width: {{score}}%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{score}}%</div>
-</div>
 
-<br>
-<br>
+        <div class="progress-bar" id="bar" role="progressbar" style="width: {{score}}%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{score}}%</div>
 
+      </div>
+
+<br><br>
 
 <div class="card">
+
   <div class="card-body">
 
+    <h3><strong>Why did we give it this rating?</strong></h3>
 
+    <br>
 
-<h3><strong>Why did we give it this rating?</strong></h3>
-<br>
-<p style="font-size:20px;">This Service:</p>
+    <p style="font-size:20px;">This Service:</p>
 
-<p style="font-size:20px;" id="zero"></p>
-<p style="font-size:20px;" id="one"></p>
-<p style="font-size:20px;" id="two"></p>
-<p style="font-size:20px;" id="three"></p>
+    <p style="font-size:20px;" id="zero"></p>
+    <p style="font-size:20px;" id="one"></p>
+    <p style="font-size:20px;" id="two"></p>
+    <p style="font-size:20px;" id="three"></p>
 
-<br>
+    <br>
 
+    <p>Please note that these figures may contain a margin of error on some websites.</p>
 
-
-<p>Please note that these figures may contain a margin of error on some websites.</p>
-
+  </div>
 
 </div>
+
+<br>
+
+<div class="card">
+<br>
+  <div style="">
+      <a href="/" class="btn btn-danger" role="button" style=" width:200px; background-color: #E00000">Go Home</a>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a href="/ScanTos" class="btn btn-danger" role="button" style="width:200px;; background-color: #E00000">Scan Another Page</a>
+<br>
+<br>
+    </button>
+  </div>
 </div>
+
 </div>
 
 <script>

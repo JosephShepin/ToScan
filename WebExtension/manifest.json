@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "ToScan",
+  "description": "A tool that analyses services to figure out how well it respects a user's privacy.",
+  "version": "0.1",
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "scripts": ["popup.js"]
+  },
+  "browser_action": {"default_popup": "popup.html"},
+  "icons": {
+    "128": "ToS.png"
+  }
+
+}

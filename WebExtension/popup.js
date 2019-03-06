@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for(i=0; i<255; i++) {
           url = url.replace(new RegExp('/'), "-slash-");
         }
-        chrome.tabs.create({'url':"http://76.29.91.11:3003/ScanTosExtention/" + url});
+        chrome.tabs.create({'url':"http://76.29.91.11:4004/ScanTosExtention/" + url});
     });
 
 

@@ -21,7 +21,7 @@ def TestTos():
     if request.method == 'POST':
         safetyurl = request.form['websiteurl']
 
-        html = urllib.urlopen(safetyurl).read()
+        html = urllib.request.urlopen(safetyurl).read()
         soup = BeautifulSoup(html)
 
         # kill all script and style elements
@@ -101,7 +101,7 @@ def TestTos():
 def TestTosExtention(safetyurl):
     safetyurl = "http://" + safetyurl.replace("-slash-","/")
     print(safetyurl)
-    html = urllib.urlopen(safetyurl).read()
+        html = urllib.request.urlopen(safetyurl).read()
     soup = BeautifulSoup(html)
 
     # kill all script and style elements
@@ -122,7 +122,7 @@ def TestTosExtention(safetyurl):
 
     print(text)
 
-    html = urllib.urlopen(safetyurl).read()
+        html = urllib.request.urlopen(safetyurl).read()
     soup = BeautifulSoup(html)
 
     # kill all script and style elements
@@ -202,4 +202,4 @@ def TestTosExtention(safetyurl):
 #run server
 if __name__ == '__main__':
     app.secret_key='secret123'
-    app.run(host='0.0.0.0', port=8080, threaded=True,debug='True')
+    app.run(host='0.0.0.0', port=8090, threaded=True,debug='True')

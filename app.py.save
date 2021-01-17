@@ -2,8 +2,9 @@
 # coding=utf-8
 from flask import Flask,Response,jsonify, render_template ,flash, redirect, url_for, session,logging,request, make_response, request
 app = Flask(__name__)
-from bs4 import BeautifulSoup
 import urllib
+from bs4 import BeautifulSoup
+
 # @app.errorhandler(Exception)
 # def all_exception_handler(error):
 #    return render_template('form.html')
@@ -42,7 +43,7 @@ def TestTos():
 
 
         ToStr =  text.lower() #Replace 'open("tos.txt", "r").read()' with str
-      
+        print(text)
         catagories = ['business-transfers', 'changes', 'tracking', 'waiving-rights']
         negatives = ['not', 'no', 'none', 'never']
         catScore = [0,0,0,0]

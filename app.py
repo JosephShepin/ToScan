@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # coding=utf-8
 from flask import Flask,Response,jsonify, render_template ,flash, redirect, url_for, session,logging,request, make_response, request
 app = Flask(__name__)

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToScan</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='ToS.png') }}">
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: 'Comfortaa', cursive;
+    }
+  </style>
+
+
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #E00000">
+    <a class="navbar-brand" href="/"><strong>To<em>Scan</em></strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+
+          <a class="nav-link" href="/ScanTos">Scanner</a>
+        </li>
+
+
+      </ul>
+  </nav>
+
+  <br><br>
+
+  <div class="container">
+    <div class="shadow p-3 mb-5 bg-white rounded">
+
+      <h2>Terms of service security tester</h2>
+
+      <br>
+      <br>
+      <form method="POST" action="/ScanTos">
+        <div class="form-group ">
+
+          <label>Enter url of the Terms of Service Page</label>
+
+          <input required class="form-control" id="urlinput" type="url" name="websiteurl"></input>
+
+          <br>
+
+          <button type="submit" onclick="startLoader()" class="btn btn-outline-danger">Scan</button>
+
+          <div class="" style="position:relative; top:7px; right:-15px;" id="loader" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+  function startLoader(){
+
+    inputValue = document.getElementById('urlinput').value;
+    if(inputValue.length > 0){
+
+  $("#loader").addClass("spinner-border text-danger")
+}
+  }
+</script>

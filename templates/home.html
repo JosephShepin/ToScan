@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToScan</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='ToS.png') }}">
+</head>
+
+<body>
+
+  <style>
+
+    #githublink:hover{
+      text-decoration: none;
+    }
+
+    body {
+      font-family: 'Comfortaa', cursive;
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #E00000">
+
+    <a class="navbar-brand" href="/"><strong>To<em>Scan</em></strong></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/ScanTos">Scanner</a>
+        </li>
+      </ul>
+  </nav>
+
+  <br><br>
+
+  <div class="container">
+  <div class="shadow p-3 mb-5 bg-white rounded">
+
+      <!-- Body of page begins here: What is toscan, link to web store, why toscan, examples -->
+      <h2>What is To<em>Scan</em>? (joey was here 2.1)</h2>
+      <h4>ToScan (short for Terms of Service Scanner) is a tool that is meant to help users know if companies respect their privacy.</h4>
+
+      <br>
+
+      <div class="text-center">
+        <a href="/ScanTos" class="btn btn-danger" role="button" style="background-color: #E00000">Go to ToS Scanner</a>
+      </div>
+
+  </div>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+
+      <h2> Our Mission </h2>
+      <h4> The reason we created To<em>Scan</em> is to better inform people of what they really get into when they check the <q>I Agree</q> box. In this modern world, corporate giants take advantage of us at every turn.
+      Corporations purposely sandwich vital points of information, such as what they do with our personal data and who they share it with, in long, arbitrary corporate <em>jargon</em> that no one will survive through reading.
+      We believe that the everyday person deserves to know what really happens when they click that <q>I Agree</q> box and surrender to a corporation's terms of service. With this in mind, we designed To<em>Scan</em> as an easy
+      to use tool to let users now exactly where their precious data is going and exactly who they can trust with it.</h4>
+
+  </div>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+      <h2> How it Works </h2>
+      <h4> ToScan works by meticuously scanning through a webpage and looking for keywords and phrases that could indicate an unethical practice, after which it gives it a score based on of how many infractions it contains
+      in each of our <em>four major categories:</em></h4>
+      <ul>
+        <li><h4>Tracking</h4></li>
+        <li><h4>3rd Party Data Sharing</h4></li>
+        <li><h4>Silent changes to the Terms of Service</h4></li>
+        <li><h4>Violations of Personal and Legal Rights</h4></li>                                                                                                                
+      </ul>
+      <h4>Just another note: Our service requires no accounts, collects no data, uses no cookies, and doesn't remotely infringe on the privacy of its users in any way!</h4>
+  </div>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+      <center><h2><a href="https://github.com/jshepin/ToScan" id="githublink" style="color:#E00000;">Also Check Out our Code on Github!</a><h2></center>
+  </div>
+
+    <br><br>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,13 +1,13 @@
-steps:	
-# Build the container image	
-- name: 'gcr.io/cloud-builders/docker'	
-  args: ['build', '-t', 'gcr.io/gcp-practice-302000/toscan', '.']	
-# Push the container image to Container Registry	
-- name: 'gcr.io/cloud-builders/docker'	
-  args: ['push', 'gcr.io/gcp-practice-302000/toscan']	
-# Deploy container image to Cloud Run	
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'	
-  entrypoint: gcloud	
-  args: ['run', 'deploy', 'toscan','--region', 'us-central1', '--image', 'gcr.io/gcp-practice-302000/toscan', '--platform', 'managed','--port','80']	
-images:	
-  - gcr.io/gcp-practice-302000/toscan 
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/test-project-308218/myapp', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/test-project-308218/myapp']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'myapp', '--image', 'gcr.io/test-project-308218/myapp', '--region', 'us-central1', '--platform', 'managed']
+images:
+- gcr.io/test-project-308218/myapp

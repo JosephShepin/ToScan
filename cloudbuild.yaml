@@ -8,6 +8,6 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'toscan-app-35924', '--image', 'gcr.io/$PROJECT_ID/toscan-app-35924', '--region', 'us-central1', '--platform', 'managed']
+  args: ['run', 'deploy', 'agfsdafera', '--image', 'gcr.io/$PROJECT_ID/toscan-app-35924', '--region', 'us-central1', '--platform', 'managed']
 images:
 - gcr.io/$PROJECT_ID/toscan-app-35924

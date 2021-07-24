@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+ENV PORT 80
+ENV HOST 0.0.0.0
+
 EXPOSE 80
 
 RUN apt-get update -y && \

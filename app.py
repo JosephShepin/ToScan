@@ -202,4 +202,4 @@ def TestTosExtention(safetyurl):
 #run server
 if __name__ == '__main__':
     app.secret_key='secret123'
-    app.run(host='0.0.0.0', port=8080, threaded=True,debug='True')
+    app.run(threaded=True)
